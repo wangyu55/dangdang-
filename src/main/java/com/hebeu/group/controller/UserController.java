@@ -27,6 +27,12 @@ public class UserController {
     @RequestMapping("/login")
     @ResponseBody
     public Admin login() {
+        // 返回值
         return adminService.getAdminById(1);
+    }
+
+    @RequestMapping("/logout")
+    public String logout() {
+        return "index";
     }
 }
