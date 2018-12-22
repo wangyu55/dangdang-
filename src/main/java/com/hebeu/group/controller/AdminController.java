@@ -1,6 +1,8 @@
 package com.hebeu.group.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * @author 言立慧
@@ -9,4 +11,9 @@ import org.springframework.stereotype.Controller;
  */
 @Controller
 public class AdminController {
+    @RequestMapping("/test")
+    @ResponseBody
+    public String test() {
+        return "测试";
+    }
 }
